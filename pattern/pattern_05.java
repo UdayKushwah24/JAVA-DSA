@@ -1,10 +1,10 @@
 /* 
-1
-1 2
-1 2 3
-1 2 3 4 
-1 2 3 4 5
-1 2 3 4 5 6
+             1 
+             2 2 
+             3 3 3 
+             4 4 4 4 
+             5 5 5 5 5 
+             6 6 6 6 6 6
 */
 package pattern;
 import java.util.Scanner;
@@ -12,7 +12,7 @@ public class pattern_05 {
     public static void pattern(int n){
         for(int i=1;i<=n;i++){
             for(int j=1;j<=i;j++){
-                System.out.print(j+" ");
+                System.out.print(i+" ");
             }
             System.out.println();
         }
