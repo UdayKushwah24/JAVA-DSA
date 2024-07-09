@@ -24,12 +24,15 @@ public class Factorial {
 package Recursion;
 import java.util.Scanner;
 public class Factorial {
-    static int factorial (int num){
-        //base case or halting case
+    public static int factorial (int num){
+
+    //base case or halting case
     if(num == 0) return 1;
-        //small problem or recursive work
+
+    //small problem or recursive work
     int small_work = factorial(num-1);
-    //solution for big problem + self work
+
+    //solution for big problem = self work + small problem
     return num * small_work;
 
     }

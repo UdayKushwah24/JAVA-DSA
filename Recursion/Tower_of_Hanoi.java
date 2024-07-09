@@ -16,7 +16,7 @@ public class Tower_of_Hanoi {
         TowerOfHanoi(n-1,helper,source,destination);
     }
     public static void main(String[] args) {
-        int n = 4;
+        int n = 5;
         TowerOfHanoi(n, "S", "H", "D");
     }
 }
