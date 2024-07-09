@@ -8,10 +8,10 @@ public class prime {
                 count = count + 1;
             }
         }
-        if(count == 1){
+        if(count == 1) {
             System.out.println("Prime Number");
         }
-        else{
+        else {
             System.out.println("not a prime number");
         }
     }
@@ -23,4 +23,27 @@ public class prime {
         sc.close();
     }
 }
+/* 
+package Functions;
+
+public class Prime_in_ranges {
+    public static boolean isPrime(int n){
+        boolean isprime = true;
+        // if(n == 2){
+        //     return true;
+        // }
+        for(int i=2;i<=n-1;i++){
+            if(n%i == 0){
+                isprime = false;
+            }
+        }
+        return isprime;
+
+    }
+    public static void main(String[] args) {
+        System.out.println(isPrime(45));
+    }
+}
+
+ */
 

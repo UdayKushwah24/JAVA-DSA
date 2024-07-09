@@ -5,7 +5,7 @@ package Functions;
 import java.util.Scanner;
 public class Palindrome {
     static String Check_palindrome(int num){
-        String originalString = ""+num;
+        String originalString = ""+num;    //convert int to str
         String reversedString = new StringBuilder(originalString).reverse().toString();
         if(originalString.equals(reversedString)){
             // System.out.println("Palindrome");
