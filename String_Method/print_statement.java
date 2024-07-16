@@ -1,4 +1,4 @@
-package String_Method;
+package String;
 
 public class print_statement {
     public static void main(String[] args) {

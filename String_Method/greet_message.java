@@ -1,4 +1,4 @@
-package String_Method;
+package String;
 import java.util.Scanner;
 public class greet_message {
     public static void main(String[] args) {

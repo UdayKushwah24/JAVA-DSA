@@ -1,5 +1,5 @@
 /*  Write a java program to replace space with underscore  */
-package String_Method;
+package String;
 
 public class replace {
     public static void main(String[] args) {

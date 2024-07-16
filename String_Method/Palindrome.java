@@ -1,4 +1,4 @@
-package String_Method;
+package String;
 
 public class Palindrome {
     public static boolean checkPalindrome(String str) {
@@ -11,7 +11,7 @@ public class Palindrome {
         return true;
     }
     public static void main(String[] args) {
-        String str = "rac ecar";
+        String str = "racecar";
         if(checkPalindrome(str)){
             System.out.println("Palindrome");
         } else {
