@@ -1,7 +1,9 @@
 package OOPs;
 
 public class Hybrid_Inheritance {
-    
+    public static void main(String[] args) {
+        
+    }
 }
 //Derived class
 class ANIMAL{
@@ -16,7 +18,7 @@ class ANIMAL{
     }
     
     //Child class or Derived class or subclass
-    class Mammal extends  ANIMAL {
+    class Mammals extends  ANIMAL {
         void walk() {
             System.out.println("Walk.....");
         }
@@ -30,7 +32,7 @@ class ANIMAL{
     }
 
     //Child class or Derived class or subclass
-    class Dog extends  Mammal {
+    class Dog extends  Mammals {
         void tail () {
             System.out.println("Having.....");
         }
