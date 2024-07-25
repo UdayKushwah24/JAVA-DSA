@@ -10,4 +10,4 @@ This is what I think about coding:
 5. Experience is the name everyone gives to their mistakes. –<b> Oscar Wilde</b> <br><br>
 Coding has the future. To stand in the future, I need to learn coding. Coding can generate a whole new world of technologies. Coding can be a gateway of opportunities (which are provided by God. For this reason I will humble myself before him and give Him thanks first for it as it is written: "Humble yourselves in the sight of the Lord, and he shall lift you up." (James 4:10))<br>
 <br>
-I will get opportunities and will grab them with the help of God. I will succeed in the future.
+<b>I will get opportunities and will grab them with the help of God. I will succeed in the future.</b> 
