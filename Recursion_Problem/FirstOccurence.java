@@ -2,6 +2,10 @@
 Write a Java code to find the first occuremce of an element in an aaray
 input : array = {8, 3, 6, 9, 5, 10, 2, 5, 3}
 output : 4
+
+Note :
+Time Comlexity : O(n)
+Space Comlexity : O(n)
  */
 package Recursion_Problem;
 

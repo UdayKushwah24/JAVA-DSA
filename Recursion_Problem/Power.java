@@ -1,3 +1,10 @@
+/* 
+Print x to the power n.
+x^n = 2^10 = 1024
+
+Time Complexity : O(n)
+ */
+
 package Recursion_Problem;
 
 public class Power {
