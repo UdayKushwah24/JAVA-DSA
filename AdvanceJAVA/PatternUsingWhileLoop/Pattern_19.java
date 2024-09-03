@@ -18,7 +18,7 @@ public class Pattern_19 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int star = n/2+1;
-        int space = 1;
+        int space = -1;
         int row = 1;
         while(row <= n) {
             int i = 1;
@@ -27,8 +27,8 @@ public class Pattern_19 {
                 i++;
             }
 
-            int j = 2;
-            while(j < space){
+            int j = 1;
+            while(j <= space){
                 System.out.print("   ");
                 j++;
             }
