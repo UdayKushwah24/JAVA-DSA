@@ -1,0 +1,11 @@
+Function Types:
+1. Parametrised 
+    i. void
+    ii. 
+2. Non Parametrised
+    i.
+    ii.
+
+types of memeory:
+i. Stack memory
+ii. Heap memory
