@@ -1,0 +1,12 @@
+Sliding window is an Algorithm
+
+Trick to apply sliding window Algorithm :-
+
+Input : Array/stirng given hai
+or sath mai 1 no. given hai (k)
+output mai sub-array or substring mai manga ho
+condition mai maxima or minima hoga
+
+Types of Sliding Window :
+1. Fixed Size Window
+2. Variable Size Window

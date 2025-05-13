@@ -1,0 +1,3 @@
+// Formulae to calculate the Time Complexity of Recursive Function
+
+TC = No. of function frame x work done by each frame
