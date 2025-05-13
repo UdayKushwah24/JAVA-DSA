@@ -1,0 +1,5 @@
+Default Capacity : 10
+Stack Example :
+1. Shadi ki plate
+2. Aate ki Bori
+3. Parle Biscuit
