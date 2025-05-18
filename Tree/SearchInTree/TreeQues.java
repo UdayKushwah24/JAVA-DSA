@@ -1,5 +1,3 @@
-package Tree.MaxMin_Tree;
-
 import java.util.Scanner;
 
 public class TreeQues {

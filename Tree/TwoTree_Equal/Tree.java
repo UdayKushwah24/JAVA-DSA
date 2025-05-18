@@ -1,0 +1,75 @@
+package Tree.TwoTree_Equal ;
+
+import java.util.Scanner;
+
+public class Tree {
+    class Node {
+        int val;
+        Node left;
+        Node right;
+    }
+ 
+    Scanner sc = new Scanner(System.in);
+ 
+
+    public Node CreateTree() {
+        int item = sc.nextInt();
+        Node nn = new Node();
+        nn.val = item;
+
+        // Left Sub Tree
+        // hLC -> Has Left Child
+        Boolean hLC = sc.nextBoolean();
+        if (hLC) {
+            nn.left = CreateTree();
+        }
+
+        // Right Sub Tree
+        // hRC -> Has Right Child
+        Boolean hRC = sc.nextBoolean();
+        if (hRC) {
+            nn.right = CreateTree();
+        }
+        return nn;
+    }
+
+    
+    // Display Tree
+    public void Display(Node nn) {
+        if (nn == null) {
+            return;
+        }
+        String s = "";
+        s = " <--" + nn.val + "--> ";
+        if (nn.left != null) {
+            s = nn.left.val + s;
+        } else {
+            s = " ." + s;
+        }
+        if (nn.right != null) {
+            s = s + nn.right.val;
+        } else {
+            s = s + ". ";
+        }
+        System.out.println(s);
+        Display(nn.left);
+        Display(nn.right);
+    }
+
+    // Check Equality of Tree     
+    public boolean TreeEqual(Node root1, Node root2) {
+        if(root1 == null && root2 == null) {
+            return true;
+        }
+        if(root1 == null || root2 == null) {
+            return false;
+        }
+        if(root1.val != root2.val) {
+            return false;
+        }
+        boolean left = TreeEqual(root1.left, root2.left );
+        boolean right = TreeEqual(root1.right, root2.right);
+        return left && right;
+    }
+
+}

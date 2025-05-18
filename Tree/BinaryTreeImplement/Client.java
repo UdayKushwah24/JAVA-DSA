@@ -17,5 +17,7 @@ public class Client {
         bt.PostOrder();
         System.out.println();
         bt.LevelOrder();
+
+        System.out.print("\nTarget Sum : "+bt.PathSum(27));
     }
 }

@@ -191,4 +191,24 @@ public class BinaryTree {
 
     }
 
+
+    
+    // <------------|| Path Sum ||------------>
+    public boolean PathSum(int target) {
+        return PathSum(root, target);
+    }
+
+    private boolean PathSum(Node root, int targetSum) {
+        if (root == null ) {
+            return false;
+        }
+        if(root.left == null && root.right == null) {
+            return targetSum-root.val == 0;
+        }
+        
+        boolean left = PathSum(root.left, targetSum-root.val);
+        boolean right = PathSum(root.right, targetSum-root.val);
+        return left || right;
+    }
+
 }
