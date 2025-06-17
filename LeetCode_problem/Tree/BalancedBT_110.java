@@ -21,6 +21,7 @@ public class BalancedBT_110 {
     }
 
     class Solution {
+        // TC : O(n^2)
         public boolean isBalanced(TreeNode root) {
             if (root == null) {
                 return true;
