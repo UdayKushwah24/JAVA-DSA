@@ -1,5 +1,7 @@
-package Leetcode.AllQuestion;
+// package Leetcode.AllQuestion;
 
+
+package Leetcode.AllQuestion;
 public class AddBinary_67 {
 
   public static String addBinary(String a, String b) {
