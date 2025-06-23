@@ -2,16 +2,18 @@ package LinkedList.LinkedListPrac;
 
 public class LinkedList {
     class Node {
-        int data;
+        int val;
         Node next;
     }
-    private int size = 0;
-    private Node head ;
-    private Node tail ;
-    public void AddFirst(int item) {
+
+    private int size ;
+    private Node head;
+    private Node tail;
+
+    public void AddFirst(int data) {
         Node nn = new Node();
-        nn.data = item;
-        if(size == 0) {
+        nn.val = data;
+        if (size == 0) {
             head = nn;
             tail = nn;
             size++;
@@ -21,125 +23,114 @@ public class LinkedList {
             size++;
         }
     }
-    /* public void AddLast(int item) {
-        Node nn = new Node();
-        nn.data = item;
-        if(size == 0) {
-            head = nn;
-            tail = nn;
-            size++;
-        } else {
-            tail.next = nn;
-            tail = nn;
-            size++;
-        }
-    } */
 
-    public void AddLast(int item) {
-        if(size == 0) {
-            AddFirst(item);
+    public void AddLast(int data) {
+
+        if (size == 0) {
+            AddFirst(data);
         } else {
             Node nn = new Node();
-            nn.data = item;
+            nn.val = data;
             tail.next = nn;
             tail = nn;
             size++;
         }
     }
 
-    public void AddAtIndex(int item, int k) throws Exception{
-        if(k == 0) {
-            AddFirst(item);
-        } else if(k == size) {
-            AddLast(item);
+    public void AddAtIndex(int k, int data) {
+        if (k == 0) {
+            AddFirst(data);
+        } else if (k == size) {
+            AddLast(data);
         } else {
             Node nn = new Node();
-            nn.data = item;
-            Node km1th = GetNode(k-1);
-            nn.next = km1th.next;
-            km1th.next = nn;
+            nn.val = data;
+            Node k_1 = GetNode(k - 1);
+            nn.next = k_1.next;
+            k_1.next = nn;
             size++;
         }
     }
 
-    // O(n)
-    private Node GetNode(int k) throws Exception {
-        if(k < 0 || k >= size) {
-            throw new Exception("Invalid Index");
+    public int getFirst() {
+        return head.val;
+    }
+    
+    public int getLast() {
+        return tail.val;
+    }
+
+    public int getAtIndex(int k) {
+        Node node = GetNode(k - 1);
+        return node.val;
+    }
+    
+
+    public int removeFirst() {
+        if (size == 1) {
+            int rv = head.val;
+            head = null;
+            tail = null;
+            size--;
+            return rv;
+        } else {
+            Node temp = head;
+            int rv = head.val;
+            head = head.next;
+            temp = null;
+            System.out.println(temp);
+            size--;
+            return rv;
         }
+    }
+
+    public int removeLast() {
+        if (size == 1) {
+            int rv = removeFirst();
+            return rv;
+        } else {
+            Node temp = GetNode(size - 2);
+            int rv = tail.val;
+            tail.next = null;
+            tail = temp;
+            size--;
+            return rv;
+        }
+    }
+
+    
+    public int removeAtIndex(int k) {
+        if (k == 0) {
+            return removeFirst();
+        } else if (k == size-1) {
+            return removeLast();
+        } else {
+            Node k_1 = GetNode(k - 1);
+            Node kth = k_1.next;
+            int rv = kth.val;
+            k_1.next = kth.next;
+            kth = null;
+            size--;
+            return rv;
+        }
+    }
+     
+    
+    public Node GetNode(int k) {
+        
         Node temp = head;
-        while (k-- > 0) {
+        for (int i = 0; i < k; i++) {
             temp = temp.next;
         }
         return temp;
     }
-
-
-    public int getFirst() {
-        return head.data;
-    }
-    public int getLast() {
-        return tail.data;
-    }
-    public int getAtIndex(int k) throws Exception{
-        return GetNode(k).data;
-    }
-
-
-
-
-    public int removeFirst() {
-        int rv = head.data;
-        if(size == 1) {
-            head = null;
-            tail = null;
-            size--;
-        } else {
-            Node temp = head;
-            head = head.next;
-            temp.next = null;
-            size--;
-        }
-        return rv;
-    }
-    public int removeLast() throws Exception{
-        if(size == 1) {
-            return removeFirst();
-        } else {
-            Node secondLast = GetNode(size-2);
-            Node temp = tail;
-            secondLast.next = null;
-            tail = secondLast;
-            size--;
-            return temp.data;
-        }
-    }
-    public int removeAtIndex(int k) throws Exception{
-        if(k == 0) {
-            return removeFirst();
-        } else if(k == size-1) {
-            return removeLast();
-        } else {
-            Node k_1th = GetNode(k-1);
-            Node kth = k_1th.next;
-            k_1th.next = kth.next;
-            kth.next = null;
-            size--;
-            return kth.data;
-        }
-    }
-
-    public int size(){
-        return size;
-    }
-
-    // O(n)
+    
     public void Display() {
         Node temp = head;
         while (temp != null) {
-            System.out.print(temp.data+"-->");
+            System.out.print(temp.val + "-->");
             temp = temp.next;
         }
         System.out.println(".");
     }
-}
+ }

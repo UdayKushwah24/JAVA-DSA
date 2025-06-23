@@ -75,6 +75,10 @@ public class CycleRemoval {
 		return null;
 	}
 
+
+
+	 
+
 	// O(n^2)
 	public void Cycle_Removal_1() {
 		Node meet = hasCycle();
@@ -93,7 +97,6 @@ public class CycleRemoval {
 				temp = temp.next;
 			}
 			start = start.next;
-
 		}
 	}
 
@@ -121,10 +124,9 @@ public class CycleRemoval {
 			fast = fast.next;
 		}
 		fast.next = null;
-
 	}
 
-	//
+	// O(n)
 	public void Floyed_Cycle_Removal() {
 		Node meet = hasCycle();
 		if (meet == null) {
@@ -152,10 +154,10 @@ public class CycleRemoval {
 		cl.AddLast(6);
 		cl.AddLast(7);
 		cl.AddLast(8);
-		cl.CreateCycle();
+		// cl.CreateCycle();
 		// cl.Cycle_Removal_1();
 		// cl.Cycle_Removal_2();
-		cl.Floyed_Cycle_Removal();
+		// cl.Floyed_Cycle_Removal();
 		cl.Display();
 
 	}

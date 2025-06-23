@@ -6,8 +6,8 @@ public class LinkedList {
         Node next;
     }
 
-    private Node head;
-    private Node tail;
+    public static Node head;
+    private Node  tail; 
     private int size;
 
     // TC : O(1)
@@ -141,6 +141,11 @@ public class LinkedList {
             temp = temp.next;
         }
         System.out.print("END");
+    }
+
+    public void CreateCycle() throws Exception {
+        Node nn = GetNode(2);
+        tail.next = nn;
     }
 
 }
