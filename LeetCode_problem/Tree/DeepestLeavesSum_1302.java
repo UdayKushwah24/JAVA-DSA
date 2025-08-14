@@ -24,7 +24,8 @@ public class DeepestLeavesSum_1302 {
 
     class Solution {
 
-       /*  public int deepestLeavesSum(TreeNode root) {
+        /*  
+        public int deepestLeavesSum(TreeNode root) {
             List<List<Integer>> list = levelOrderBottom(root);
             List<Integer> ll = list.get(list.size() - 1);
             int sum = 0;
@@ -33,9 +34,9 @@ public class DeepestLeavesSum_1302 {
             }
             return sum;
         }
-
+        
         public List<List<Integer>> levelOrderBottom(TreeNode root) {
-
+        
             Queue<TreeNode> queue = new LinkedList<>();
             List<List<Integer>> list = new ArrayList<List<Integer>>();
             if (root == null) {

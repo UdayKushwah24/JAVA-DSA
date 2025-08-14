@@ -1,8 +1,8 @@
 package Leetcode.Tree;
- 
-public class TransformToSum {
 
+public class DistributeCoinInBT_979 {
     public class TreeNode {
+
         int val;
         TreeNode left;
         TreeNode right;
@@ -22,15 +22,21 @@ public class TransformToSum {
     }
 
     class Solution {
-        public int transform(TreeNode root) {
+        int ans = 0;
+
+        public int distributeCoins(TreeNode root) {
+            minmove(root);
+            return ans;
+        }
+
+        public int minmove(TreeNode root) {
             if (root == null) {
                 return 0;
             }
-            int leftChild = transform(root.left);
-            int rightchild = transform(root.right);
-            int data = root.val;
-            root.val = root.left.val + leftChild + root.right.val + rightchild;
-            return data;
+            int left = minmove(root.left);
+            int right = minmove(root.right);
+            ans += Math.abs(left) + Math.abs(right);
+            return root.val + left + right - 1;
         }
     }
 }
